@@ -1,8 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt-get -y update
-RUN apt-get -y install software-properties-common
+#RUN apt-get -y update
+#RUN apt-get -y install software-properties-common
 RUN add-apt-repository multiverse
+RUN dpkg --add-architecture -386
 RUN apt-get -y update && \
     apt-get -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
     apt-get clean
