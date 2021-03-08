@@ -1,8 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt-get -y update && \
-    apt-get -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
-    apt-get clean
+RUN add-apt-repository multiverse
+RUN apt -y update && \
+    apt -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
+    apt clean
 
 RUN useradd -m steam
 WORKDIR /home/steam
