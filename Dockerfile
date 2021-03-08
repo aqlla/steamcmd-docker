@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+RUN apt-get -y update
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository multiverse
 RUN apt-get -y update && \
