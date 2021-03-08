@@ -1,10 +1,10 @@
 FROM ubuntu:latest
 
-RUN apt -y install software-properties-common
+RUN apt-get -y install software-properties-common
 RUN add-apt-repository multiverse
-RUN apt -y update && \
-    apt -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
-    apt clean
+RUN apt-get -y update && \
+    apt-get -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
+    apt-get clean
 
 RUN useradd -m steam
 WORKDIR /home/steam
