@@ -1,5 +1,6 @@
 FROM ubuntu:latest
 
+RUN apt -y install software-properties-common
 RUN add-apt-repository multiverse
 RUN apt -y update && \
     apt -y install lib32gcc1 lib32stdc++6 curl steamcmd && \
